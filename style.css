@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    
+}
+h1 {
+    color: white;
+}
+.transit_system {
+	font-family: "Arial Black", Arial, Sans-serif;
+    color: white;
+    font-size: 100%;
+    line-height: 40%;
+    width: 100%;
+}
+
+.destination {
+	font-family: "Arial Black", Arial, Sans-serif;
+    color: white;
+    font-size: 250%;
+    line-height: 40%;
+}
+
+.minutes {
+	font-family: "Arial", Arial, Sans-serif;
+    color: white;
+    font-size: 250%;
+    line-height: 40%;
+    position: absolute;
+    right: 0;
+}
