@@ -39,8 +39,22 @@ function get_ac_transit_etd() {
         hours = etd_ac_transit_date.getHours();
         postfix = "am";
     }
+    if (etd_ac_transit_date.getHours() >= 12)
+        postfix = "pm";
+    else
+        postfix = "am";
         
-    document.getElementById("act_etds").innerHTML = "<p><span class=\"destination\">51A to Alameda</span></span><span class=\"minutes\">" + hours + ":" + etd_ac_transit_date.getMinutes() + postfix + "</span>></p>";
+    document.getElementById("act_etds").innerHTML = "<p><span class=\"destination\">51A to Alameda</span></span><span class=\"minutes\">" + hours + ":" + zeroFill(etd_ac_transit_date.getMinutes(),2) + postfix + "</span>></p>";
+}
+
+function zeroFill( number, width )
+{
+  width -= number.toString().length;
+  if ( width > 0 )
+  {
+    return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
+  }
+  return number + ""; // always return a string
 }
 
 function refresh_times(){
